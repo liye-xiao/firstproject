@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鼎丰居-投资页</title>
+    <!-- <link rel="stylesheet" href="../../res/css/common/reset.css" />
+    <link rel="stylesheet" href="../../res/css/recommend/invest.css" /> -->
+    <style>
+    
+    body{
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    font: 0.26rem/1.5 "SourceHanSansCN-Regular","microsoft yahei";
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+img {
+    padding: 0;
+    margin: 0;
+    /* font-family: "microsoft yahei"; */
+    font-family: "SourceHanSansCN-Regular";
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+i {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #fe57a1;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fe57a1;
+    color: #fff;
+    text-shadow: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+b,
+strong {
+    font-weight: bold;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+div{
+    box-sizing: border-box;
+}
+form {
+    margin: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: .347rem /* 26/75 */;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
+    *overflow: visible;
+}
+
+table button,
+table input {
+    *overflow: auto;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    outline: none;
+    border: 0px solid transparent;
+    -webkit-appearance: button;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+input:invalid,
+textarea:invalid {
+    background-color: #f0dddd;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top;
+}
+ul,li{list-style: none;}
+a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+
+.blockcolor{background-color: #ffffff;}
+/* .overhide{overflow: hidden;} */
+.tabActive{
+    color: #37b2f9 !important;
+    border-bottom: 3px solid #37b2f9;
+}
+img{width: 100%;height: 100%;}
+.headImg{
+   position: relative; 
+}
+.headBannerImg{
+    width: 100%;
+    height: 100%;
+}
+
+.headDetail{
+    padding: 0.2rem 0.22rem;
+    background-color: #ffffff; 
+}
+.headTitle{
+    font-size: 0.32rem;
+    line-height: 1.8;
+    font-weight: bold;
+}
+.headTxt{
+    line-height: 1.6;
+    color: #999999;
+}
+/* 列表 */
+.houseAll{
+    background: #fff;
+    margin-top: 0.2rem;
+}
+
+.houseliItem{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 0.24rem 0.3rem 0.2rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.houseliImg{
+    position: relative;
+    width: 1.9rem;
+    height: 1.4rem;
+        border-radius: 0.08rem;
+    overflow: hidden;
+}
+
+.houseliaddress{
+    position: absolute;
+    bottom: 0.1rem;
+    left: 0.1rem;
+    display: flex;
+    align-items: center;
+}
+.houseliDetail{
+    width: 4.5rem;
+    margin-left: 0.2rem;
+}
+.sugInfoDetail{
+   justify-content: baseline;
+}
+.houseliaddress img {
+    width: 0.2666rem;
+    height: auto;
+}
+.houseliaddress span {
+    color: #fff;
+    margin-left: 0.1rem;
+    font-size: 0.20rem;
+}
+.houseTitle{
+    width: 3.0rem;
+    font-size: 0.28rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.houseTag{
+    height: 0.26rem;
+    line-height: 0.24rem;
+    color: #82B2E8;
+    border: 1px solid #82B2E8;
+    padding: 0 0.1rem;
+    font-size: 0.20rem;
+    margin-top: 0.02rem;
+}
+
+.houseliTitle {
+    display: flex;
+    justify-content: space-between;
+}
+.houseTotal{
+    display: flex;
+    justify-content: flex-start;
+}
+.houseList{
+    justify-content: flex-start;
+    font-size: 0.20rem;
+    line-height: 1.4;
+}
+
+.minPrice{
+    font-size: 0.28rem;
+    color: #FF590F;
+    font-weight: 600;
+}
+.housePrice {
+    font-size: 0.20rem;
+    line-height: 1.8;
+    color: #888888;
+}
+.houseMsgTxt,.houseMsgTxt2{
+    display: block;
+    padding: 0 0.08rem;
+    text-align: center;
+    font-size: 0.20rem;
+    margin-top: 0.1rem;
+    margin-right: 0.2rem;
+}
+.houseMsgTxt {
+    background: #FFECE8;
+    color: #FA5741;
+}
+.houseMsgTxt2{
+    background: #E1F5ED;
+    color: #25BFA7;
+}
+.Left{margin-right: 0.3rem}</style>
+</head>
+
+<body>
+    <div class="main_house">
+        <header>
+            <div class="headImg">
+                <img class="headBannerImg" src="http://dfjresource.oss-cn-shenzhen.aliyuncs.com/pic/20180319093336_305.jpg?x-oss-process=image/resize,m_fill,w_800,h_500,limit_0/auto-orient,1/quality,q_90/watermark,image_5b6u5L-h5Zu-54mHXzIwMTgwMzA1MTU1NjIxLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxwXzEwMC9icmlnaHQsMC9jb250cmFzdCw5OA,t_100,g_se,y_20,x_15" />
+            </div>
+            <div class="headDetail">
+                <div class="headTitle">投 资</div>
+                <p class="headTxt">投资泰国房，年收益率在5%-8%，泰国房产形式近几年稳步上升，旅游热度非常好，带动房租和短租业务增长。</p>
+            </div>
+        </header>
+        <!-- 房产列表 start-->
+        <div class="houseAll">
+            <ul class="houseList">
+                <li>
+                    <a href="recom-detail.html">
+                        <div class="houseliItem">
+
+                            <div class="houseliImg">
+                                <img class="houseliPic" src="http://dfjresource.oss-cn-shenzhen.aliyuncs.com/pic/20180312104809_572.jpg?x-oss-process=image/resize,m_fill,w_260,h_180,limit_0/auto-orient,1/quality,q_90/watermark,image_5b6u5L-h5Zu-54mHXzIwMTgwMzA1MTU1NjIxLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxwXzUwL2JyaWdodCwwL2NvbnRyYXN0LDU2,t_100,g_se,y_10,x_5">
+                                <div class="houseliaddress">
+                                    <img src="../../res/images/house-x/local.png" />
+                                    <span>泰国-普吉</span>
+                                </div>
+                            </div>
+                            <div class="houseliDetail">
+                                <div class="sugInfoDetail">
+                                    <div class="houseliTitle overhide">
+                                        <h2 class="houseTitle txtover">曼谷时尚摩登公寓
+                                        </h2>
+                                        <div class="houseTag">投资房</div>
+                                    </div>
+
+                                    <div class="houseTotal houseList">
+                                        <span class="houseTit">公寓&emsp;</span>
+                                        <span class="houseType">2~3居室&emsp;</span>
+                                        <span class="houseArea">33~78 ㎡</span>
+                                    </div>
+                                    <div class="houseTotal">
+                                        <span class="housePrice">总价:&emsp;
+                                            <i class="minPrice">84-420W</i>
+                                        </span>
+                                    </div>
+                                    <div class="houseTotal overhide">
+                                        <span class="houseMsgTxt">近一年房价增7%</span>
+                                        <span class="houseMsgTxt">近一年租金9%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="recom-detail.html">
+                        <div class="houseliItem">
+                            <div class="houseliImg">
+                                <img class="houseliPic" src="http://dfjresource.oss-cn-shenzhen.aliyuncs.com/pic/20180312104809_572.jpg?x-oss-process=image/resize,m_fill,w_260,h_180,limit_0/auto-orient,1/quality,q_90/watermark,image_5b6u5L-h5Zu-54mHXzIwMTgwMzA1MTU1NjIxLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxwXzUwL2JyaWdodCwwL2NvbnRyYXN0LDU2,t_100,g_se,y_10,x_5">
+                                <div class="houseliaddress">
+                                    <img src="../../res/images/house-x/local.png" />
+                                    <span>泰国-普吉</span>
+                                </div>
+                            </div>
+                            <div class="houseliDetail">
+                                <div class="sugInfoDetail">
+                                    <div class="houseliTitle overhide">
+                                        <h2 class="houseTitle txtover">普吉岛太湖公园公寓
+                                        </h2>
+                                        <div class="houseTag">投资房</div>
+                                    </div>
+                                    <div class="houseTotal houseList">
+                                        <span class="houseTit">公寓&emsp;</span>
+                                        <span class="houseType">2~3居室&emsp;</span>
+                                        <span class="houseArea">33~78 ㎡</span>
+                                    </div>
+                                    <div class="houseTotal">
+                                        <span class="housePrice">总价:&emsp;
+                                            <i class="minPrice">84-420W</i>
+                                        </span>
+                                    </div>
+                                    <div class="houseTotal overhide">
+                                        <span class="houseMsgTxt">近一年房价增7%</span>
+                                        <span class="houseMsgTxt">近一年租金9%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<!-- <script src="../../res/js/lib/jquery.min.js"></script>
+<script src="../../res/js/common.js"></script>
+<script src="../../res/js/recomend/recomend.js"></script> -->
+<script>
+    //rem屏幕的适配
+        function Rem() {
+            var docEl = document.documentElement,
+                oSize = docEl.clientWidth / 7.2;
+
+            if (oSize > 100) {
+                oSize = 100; // 限制rem值 640 / 6.4 =100
+            }
+
+            docEl.style.fontSize = oSize + 'px';
+        }
+
+        window.addEventListener('resize', Rem, false);
+        Rem();
+</script>
+</html>
