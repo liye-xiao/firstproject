@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全 选</title>
+
+</head>
+<body>
+	<input type="checkbox" id="all">全选
+	<hr />
+	<input type="checkbox" name="pro">1<br />
+	<input type="checkbox" name="pro">2<br />
+	<input type="checkbox" name="pro">3<br />
+
+<!--原生js-->
+<script type="text/javascript">
+	
+	var all = document.getElementById('all');
+    //点击全选
+	all.onclick = function(){
+		//此处可用类名
+	    var inp = document.getElementsByName('pro');
+	    for(var i = 0, len = inp.length; i < len; i++){
+	        inp[i].checked = all.checked;
+	    }
+	}
+
+</script>
+<!--jq方法-->
+<script src="http://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+<script>
+//	$(function(){
+//	    $("#all").click(function(){
+//			if(this.checked){
+//				
+//	            $("input[name='pro']").prop('checked',true);
+//	        }else{
+//	        	
+//	            $("input[name='pro']").prop('checked',false);
+//	        }
+//	        
+//	    });
+//	});
+</script>
+<div class="input">
+	<input class="tel input_all" type="text" name="tel" placeholder="手机号">
+</div>
+<div class="input huoqu">
+	<input class="yzm input_all" type="text" name="code" placeholder="验证码">
+	<button class="btn1">获取验证码</button>
+</div>
+<span class="error"></span>
+
+<script>
+	var btn1 = document.querySelector('.btn1');
+		var tel = document.querySelector('.tel');
+		var error = document.querySelector('.error');
+		var time = 60;
+		btn1.onclick = function () {
+			var name = tel.value;
+			if (name == "") {
+				
+				error.innerHTML = '手机号不能为空!';
+				return;
+			}
+			else {
+				if (!(/^1[3|4|5|7|8]\d{9}$/.test(name))) {
+					error.innerHTML = '手机号格式有误.';
+					return;
+				}
+				console.log(name);
+			}
+			var timer = setInterval(function () {
+				time--;
+				btn1.innerHTML = time + "秒";
+				btn1.disabled = true;
+				if (time == 0) {
+					time = 60;
+					clearInterval(timer);
+					btn1.innerHTML = "获取验证码";
+					btn1.disabled = false;
+				}
+			}, 1000);
+		}
+
+
+    // 所对应的value值相加
+	var abc = [
+		{ typeid: 1, ade: 1 },
+		{ typeid: 2, ade: 1 },
+		{ typeid: 1, ade: 2 },
+		{ typeid: 1, ade: 2 },
+		{ typeid: 2, ade: 2 },
+	]
+
+	var result = {};
+
+	for (i = 0; i < abc.length; i++) {
+		if (result[abc[i].typeid]) {
+			result[abc[i].typeid] += abc[i].ade;
+		} else {
+			result[abc[i].typeid] = abc[i].ade;
+		}
+	}
+	console.log(result)
+
+	var keyvalue = [];
+	for (var key in result) {
+		keyvalue.push({ typeid: key, adelenth: result[key] })
+	}
+	console.log(keyvalue) 
+</script>
+</body>
+</html>
