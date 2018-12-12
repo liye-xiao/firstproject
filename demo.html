@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>本地请求json</title>
+
+</head>
+
+<body>
+
+
+</body>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script>
+    $(function() {
+        $.getJSON("order.json", function (data) {
+            console.log(data);
+        })
+    })
+</script>
+</html>
